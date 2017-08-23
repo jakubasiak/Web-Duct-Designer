@@ -1,0 +1,130 @@
+﻿section {
+    background-color: rgba(0,0,0,0.8);
+    min-width: 100vw;
+    min-height: 100vh;
+    color: white;
+}
+
+.content-wrapper {
+    min-height: 100vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.center {
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+iframe {
+    display: block;
+}
+
+.control-arrow {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.rotate180 {
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg); /* Standard syntax */
+}
+
+#logo-container {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    min-width: 50%;
+}
+
+#section1 {
+    /*background-color: #070707;*/
+    background: url('../../Content/back.png') repeat center center fixed;
+    background-color: #161616;
+    text-align: center;
+    color: black;
+}
+
+#section2 {
+    background-color: #161616
+}
+
+#section3 {
+    background-color: #4d4d4d
+}
+
+#section4 {
+    background-color: #959595
+}
+
+#section5 {
+    background-color: #F8E9A1
+}
+
+.red {
+    color: red;
+}
+
+.form-area {
+    padding: 10px 40px 0px;
+    margin: 10px 0px 0px;
+}
+/* The side navigation menu */
+body {
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .sidenav a:hover, .offcanvas a:focus {
+            color: whitesmoke;
+        }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+#menu {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 25px; /* Position the navbar at the top of the page */
+    left: 25px;
+    z-index: 1;
+}

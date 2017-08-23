@@ -1,0 +1,113 @@
+﻿@model WebDuctDesigner.Models.DuctSelectionResultViewModel
+@using WebDuctDesigner.Helpers;
+@using HVAC.FluidMechanics;
+<style>
+    table, tr, th {
+        text-align: center;
+    }
+</style>
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Round ducts</strong></div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Size<br />[mm]</th>
+                    <th>Velocity<br />[m/s]</th>
+                    <th>Friction loss<br />[Pa/m]</th>
+                    <th>Pressure drop<br />[Pa]</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.SelectionType == WebDuctDesigner.Models.SelectionType.Velocity)
+                {
+                    foreach (var item in Model.RoundDucts)
+                    {
+                    <tr @Html.SetAlpha(Model.TargetValue, item.Velocity)>
+                        <td>@item.Size</td>
+                        <td>@string.Format("{0:F2}", item.Velocity)</td>
+                        <td>@string.Format("{0:F4}", item.FrictionLoss)</td>
+                        <td>@string.Format("{0:F4}", item.PressureDrop)</td>
+                    </tr>
+                    }
+                }
+                else
+                {
+                    foreach (var item in Model.RoundDucts)
+                    {
+                    <tr @Html.SetAlpha(Model.TargetValue, item.FrictionLoss)>
+                        <td>@item.Size</td>
+                        <td>@string.Format("{0:F2}", item.Velocity)</td>
+                        <td>@string.Format("{0:F6}", item.FrictionLoss)</td>
+                        <td>@string.Format("{0:F6}", item.PressureDrop)</td>
+                    </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Rectangular ducts</strong></div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Size<br />[mm]</th>
+                    <th>Velocity<br />[m/s]</th>
+                    <th>Friction loss<br />[Pa/m]</th>
+                    <th>Pressure drop<br />[Pa]</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.SelectionType == WebDuctDesigner.Models.SelectionType.Velocity)
+                {
+                    foreach (var item in Model.RectangularDucts)
+                    {
+                        <tr @Html.SetAlpha(Model.TargetValue, item.Velocity)>
+                            <td>@item.Size</td>
+                            <td>@string.Format("{0:F2}", item.Velocity)</td>
+                            <td>@string.Format("{0:F6}", item.FrictionLoss)</td>
+                            <td>@string.Format("{0:F6}", item.PressureDrop)</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    foreach (var item in Model.RectangularDucts)
+                    {
+                        <tr @Html.SetAlpha(Model.TargetValue, item.FrictionLoss)>
+                            <td>@item.Size</td>
+                            <td>@string.Format("{0:F2}", item.Velocity)</td>
+                            <td>@string.Format("{0:F4}", item.FrictionLoss)</td>
+                            <td>@string.Format("{0:F4}", item.PressureDrop)</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetValue)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetValue)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+    </table>*@

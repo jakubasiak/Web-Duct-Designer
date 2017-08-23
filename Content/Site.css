@@ -1,0 +1,55 @@
+﻿body {
+    padding-bottom: 20px;
+    /*background: url('back2.jpg') repeat center center fixed;*/
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(208,208,208,1)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(255,255,255,0),rgba(208,208,208,1)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(208,208,208,1)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, (255,255,255,0), rgba(208,208,208,1)); /*Standard*/
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.greenTextarea {
+    background-color: #95ed95;
+}
+
+table, tr, th {
+    text-align: center;
+}
+
+.modal-lg #targetValueModal {
+    width: 950px; /* New width for large modal */
+}
+.modal-lg #relativeRoughnessModal {
+    width: 700px; /* New width for large modal */
+}
+
+
+
+
+
+

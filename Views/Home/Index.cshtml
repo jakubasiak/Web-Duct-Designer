@@ -1,0 +1,169 @@
+﻿@model WebDuctDesigner.Models.EmailFormModel
+@{
+    Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
+    ViewBag.Title = "Duct Designer";
+}
+    @Styles.Render("~/Content/MainPageStyles")
+    
+<div class="container row">
+    <span id="menu" style="font-size:30px; cursor:pointer" onclick="openNav()">&#9776;</span>
+    <div id="mySidenav" class="sidenav" style="width:300px;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#section1">Strona główna</a>
+        <a href="#section2">Desktop Duct Design</a>
+        <a href="#section3">Web Duct Design</a>
+        <a href="#section4">Kontakt</a>
+    </div>
+    <section id="section1" class="col-sm-12">
+        @*<iframe id="youTube" width="854" height="480" frameborder="0" class="center"
+            src="https://www.youtube.com/embed/jJ72gku2esg"></iframe>*@
+        <div class="row content-wrapper">
+            <div class="col-sm-12">
+                <img id="logo-container" src="~/Content/Logo.png" class="img-responsive" />
+                <div style="width:50vw; margin: 10vh auto;">
+                    <div style="text-align:left">
+                        <h1>Dobieraj kanały wentylacyjne</h1>
+                    </div>
+                    <div style="text-align:right">
+                        <h2>Obliczaj spadki ciśnienia</h2>
+                    </div>
+                    <div style="text-align:center">
+                        <h3>eksportuj wyniki do pliku</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <a href="#section2" class="center">
+                    <img src="~/Content/arrow.png" class="control-arrow" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="section2" class="col-sm-12">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="#section1">
+                        <img src="~/Content/arrow.png" class="control-arrow rotate180" style="filter: invert(100%);" />
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Desktop Duct design</h2>
+                    <h3>Aplikacja dla systemu Windows</h3>
+                    <p>
+                        Aplikacja <strong>Duct design</strong> dla systemu Windows pozwala na szybki i łatwy dobór kanałów wentylacyjnych w oparciu o kryterium założonej prędkości powietrza,
+                        lub w oparciu o kryterium jednostkowych oporów przepływu przez kanał wentylacyjny. Aplikacja pozwala również na obliczanie oporów przepływu powietrza w prostym systemie wentylacyjnym
+                        stworzonym przez użytkownika. Dane uzyskane w wyniku obliczeń można w łatwy sposób wyeksportować do arkusza kalkulacyjnego lub do postaci raportu w formacie pdf.
+                    </p>
+                    <p>
+                        <h3>@Html.ActionLink("Pobierz Desktop Duct Design", "Download", "Home")</h3>
+                    </p>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <img src="~/Content/DDD.png" class="img-responsive" />
+                </div>
+
+                <div class="col-sm-12">
+                    <a href="#section3">
+                        <img src="~/Content/arrow.png" class="control-arrow" style="filter: invert(100%);" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section3" class="col-sm-12">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="#section2">
+                        <img src="~/Content/arrow.png" class="control-arrow rotate180" style="filter: invert(100%);" />
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <img src="~/Content/WDD.png" class="img-responsive" />
+                </div>
+                <div class="col-md-6">
+                    <h2>Web Duct design</h2>
+                    <h3>Aplikacja internetowa</h3>
+                    <p>
+                        Aplikacja <strong>Duct design</strong> dla w wersji przeglądarkowej podobnie jak w wersji dla systemu Windows pozwala na szybki i łatwy dobór kanałów wentylacyjnych w oparciu o kryterium założonej prędkości powietrza,
+                        lub w oparciu o kryterium jednostkowych oporów przepływu przez kanał wentylacyjny. Pozostałe finkcjonalności znane z wersji desktop nie są dostępne. Aplikacja w wersji przeglądarkowej nie wymaga instalacji i jest
+                        dostępna w każdej sytuacji i na każdym urządzeniu mającym dostęp do internetu.
+                    </p>
+                    <p>
+                        <h3>@Html.ActionLink("Przejdź do Web Duct Design", "Index", "DuctDesigner")</h3>
+                    </p>
+                </div>
+                <div class="col-sm-12">
+                    <a href="#section4">
+                        <img src="~/Content/arrow.png" class="control-arrow" style="filter: invert(100%);" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section4" class="col-sm-12">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="#section3">
+                        <img src="~/Content/arrow.png" class="control-arrow rotate180" style="filter: invert(100%);" />
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <h2>Odwiedź moją stronę</h2>
+                    <p>
+                        Jeśli jesteś zainteresowany jak to działa, lub chcesz rozwijać swoje oprogramowanie w oparciu o tworzoną przeze mnie bibliotekę klas, odwiedź mojego Githuba.
+                    </p>
+                    <a href="https://github.com/jakubasiak">
+                        <img src="~/Content/GitHub_Logo_White.png" class="img-responsive" />
+                    </a>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <!--Start contact-->
+                    <h2>Skontaktuj się</h2>
+                    <div>
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                            <br style="clear:both">
+                            <div class="form-group">
+                                @Html.EditorFor(m => m.Name, new{ htmlAttributes = new { @class = "form-control", placeholder = "Imię", id = "name" } })
+                                @Html.ValidationMessageFor(m => m.Name)
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(m => m.Email, new{ htmlAttributes = new { @class = "form-control", placeholder = "Email", id = "email" } })
+                                @Html.ValidationMessageFor(m => m.Email)
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(m=>m.Subject, new{ htmlAttributes = new { @class = "form-control", placeholder = "Temat", id="subject" } })
+                                @Html.ValidationMessageFor(m => m.Subject)
+                            </div>
+                            <div class="form-group">
+                                @Html.TextAreaFor(m=>m.Message, new { @class="form-control", type="textarea", id="message", placeholder="Message", maxlength="140", rows="7" } )
+                                <span class="help-block"><p id="characterLeft" class="help-block ">Przekroczyłeś limit znaków</p></span>
+                                @Html.ValidationMessageFor(m => m.Message)
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="submit" name="submit" class="btn btn-primary">Wyślij</button>
+                            </div>
+                        }
+                    </div>
+
+                    <!--End Contact-->
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/MainPageScripts")
+}
